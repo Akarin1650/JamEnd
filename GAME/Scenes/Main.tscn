@@ -354,12 +354,14 @@ tracks/1/keys = {
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource( 3 )
+looseScreen = ExtResource( 28 )
 cardList = [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ) ]
 playerScene = ExtResource( 15 )
 hpPlayerBarPath = NodePath("GameContainer/PlayerSpawn/BarBorder/HpPlayerBar")
 hpEnemyBarPath = NodePath("GameContainer/enemySpawn/BarBorder2/HpEnemyBar")
 animHpPlayerPath = NodePath("GameContainer/PlayerSpawn/BarBorder/HpPlayer")
 animHpEnemyPath = NodePath("GameContainer/enemySpawn/BarBorder2/HpEnemy")
+looseScreenPointPath = NodePath("CanvasLayer/containerLooseScreen")
 spawnEnemyPath = NodePath("GameContainer/enemySpawn")
 spawnPlayerPath = NodePath("GameContainer/PlayerSpawn")
 cardOnePosPath = NodePath("GameContainer/CardOne")
@@ -507,13 +509,6 @@ margin_right = 1893.0
 margin_bottom = 1052.0
 text = "SETTINGS"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="GameContainer"]
-visible = false
-
-[node name="LooseScreen" parent="GameContainer/CanvasLayer" instance=ExtResource( 28 )]
-margin_right = -1920.0
-margin_bottom = -1080.0
-
 [node name="placeholderWE" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
 
@@ -526,3 +521,9 @@ position = Vector2( 960, 540 )
 
 [node name="Settings" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3215, -934 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="containerLooseScreen" type="Node2D" parent="CanvasLayer"]
+z_index = 4096

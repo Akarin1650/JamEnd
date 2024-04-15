@@ -22,6 +22,8 @@ namespace Com.IsartDigital.Jam.Managers{
 		    return instance;
 		}
 
+        [Export] public PackedScene looseScreen;
+
         private GameManager ():base() {}
         [Export] public List<PackedScene> cardList;
         [Export] public PackedScene playerScene;
@@ -41,6 +43,7 @@ namespace Com.IsartDigital.Jam.Managers{
         public AnimationPlayer animHpEnemy;
 
 
+        [Export] private NodePath looseScreenPointPath;
         [Export] private NodePath spawnEnemyPath;
         [Export] private NodePath spawnPlayerPath;
 
@@ -56,6 +59,7 @@ namespace Com.IsartDigital.Jam.Managers{
         [Export] public PackedScene ogreFacotry;
         [Export] public PackedScene dragonFacotry;
 
+        public Node2D looseScreenPoint;
         private Node2D cardOnePos;
         private Node2D cardTwoPos;
         private Node2D cardThreePos;
@@ -100,6 +104,7 @@ namespace Com.IsartDigital.Jam.Managers{
             spawnEnemy = GetNode<Node2D>(spawnEnemyPath);
             spawnPlayer = GetNode<Node2D>(spawnPlayerPath);
 
+            looseScreenPoint = GetNode<Node2D>(looseScreenPointPath);
             cardOnePos = GetNode<Node2D>(cardOnePosPath);
             cardTwoPos = GetNode<Node2D>(cardTwoPosPath);
             cardThreePos = GetNode<Node2D>(cardThreePosPath);
