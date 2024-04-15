@@ -18,7 +18,7 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities {
             2 + GameManager.GetInstance().rand.RandiRange(0, 5),
             0.5f + GameManager.GetInstance().rand.RandfRange(0.3f, 1),
             0 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            1 + GameManager.GetInstance().rand.RandiRange(0, 3),
             GameManager.GetInstance().RandomElement()
             )
         { }

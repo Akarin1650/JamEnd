@@ -167,15 +167,14 @@ namespace Com.IsartDigital.Jam.Managers
                         break;
 
                     case "win or loose":
-                        GD.Randomize();
-                        int lIndex = (int)GD.RandRange(0,2);
+                        int lIndex = GameManager.GetInstance().rand.RandiRange(0, 1);
                         if (lIndex == 0)
                         {
                             pClass.Strength += currentEnemy.Strength;
                             pClass.Magic += currentEnemy.Magic;
                             pClass.Charisma += currentEnemy.Charisma;
                         }
-                        else if(lIndex == 1 || lIndex ==2)
+                        else if(lIndex == 1)
                         {
                             pClass.Strength -= currentEnemy.Strength;
                             pClass.Magic -= currentEnemy.Magic;
