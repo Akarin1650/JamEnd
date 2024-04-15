@@ -27,6 +27,11 @@ namespace Com.IsartDigital.ProjectName{
         private Node2D firstTuto;
         private Node2D secondTuto;
 
+        [Export] private NodePath animationPath = null;
+        private AnimationPlayer animation;
+        [Export] private NodePath quitAnimationPath = null;
+        private AnimationPlayer quitAnimation;
+
         public override void _Ready()
         {
             #region singleton ready
@@ -44,6 +49,8 @@ namespace Com.IsartDigital.ProjectName{
             closeButton.Connect("pressed", this, nameof(QuitTuto));
             firstTuto = GetNode<Node2D>(firstTutoPath);
             secondTuto = GetNode<Node2D>(secondTutoPath);
+            animation = GetNode<AnimationPlayer>(animationPath);
+            quitAnimation = GetNode<AnimationPlayer>(quitAnimationPath);
         }
 
         public override void _Process(float pDelta)
@@ -55,17 +62,23 @@ namespace Com.IsartDigital.ProjectName{
         {
             firstTuto.Hide();
             secondTuto.Show();
+            animation.Play("SecondPanelApparition");
         }
 
         private void QuitTuto()
         {
-            Hide();
+            quitAnimation.Play("QuitAnimation");
         }
 
         protected override void Dispose(bool pDisposing)
         {
             if (pDisposing && instance == this) instance = null;
             base.Dispose(pDisposing);
+        }
+
+        public void StartAnim()
+        {
+            animation.Play("TutoApparition");
         }
     }
 }

@@ -50,7 +50,7 @@ public class Credits : Control
         {
             "Art",
             "Julia Feng",
-            "Helen Feng"
+            "Helene Feng"
         },
         new List<string>
         {

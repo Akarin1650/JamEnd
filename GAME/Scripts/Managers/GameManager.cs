@@ -141,7 +141,7 @@ namespace Com.IsartDigital.Jam.Managers{
         public async void SpawnCards()
         {
             await UtilsCoroutine.WaitForSeconds(0.01f);
-            SoundManager.GetInstance().PlaySfxSound(SfxName.CARD_DRAW_AMBIANCE, 0, -3);
+            SoundManager.GetInstance().PlaySfxSound(SfxName.CARD_DRAW_AMBIANCE, 0, -5);
 
             for (int i = 0; i < cardPosList.Count; i++)
             {
@@ -202,7 +202,7 @@ namespace Com.IsartDigital.Jam.Managers{
             AttackAnimation();
 
 
-            SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_WATER, 0, 0);
+            SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_WATER, 0, -5);
 
             if (needToDiscard && !discardAllCard)
             {
@@ -288,27 +288,27 @@ namespace Com.IsartDigital.Jam.Managers{
             if (pEnemyType is Dragon)
             {
                 //SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_DRAGON, 0, 0);
-                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_DRAGON, 0, 0);
+                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_DRAGON, 0, -5);
             }
             if (pEnemyType is Demon)
             {
                 //SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_OGRE, 0, 0);
-                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_OGRE, 0, 0);
+                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_OGRE, 0, -5);
             }
             if (pEnemyType is Squelette)
             {
                 //SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_SKELETON, 0, 0);
-                SoundManager.GetInstance().PlaySfxSound(SfxName.SKELETON_HURT, 0, 0);
+                SoundManager.GetInstance().PlaySfxSound(SfxName.SKELETON_HURT, 0, -5);
             }
             if (pEnemyType is Sorcier)
             {
                 //SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_WITCHER, 0, 0);
-                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_WITCHER, 0, 0);
+                SoundManager.GetInstance().PlaySfxSound(SfxName.HURT_WITCHER, 0, -5);
             }
             if (pEnemyType is Zombie)
             {
                 //SoundManager.GetInstance().PlaySfxSound(SfxName.ATTACK_ZOMBIE, 0, 0);
-                SoundManager.GetInstance().PlaySfxSound(SfxName.ZOMBIE_HURT, 0, 0);
+                SoundManager.GetInstance().PlaySfxSound(SfxName.ZOMBIE_HURT, 0, -5);
             }
         }
 
