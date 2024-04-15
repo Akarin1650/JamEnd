@@ -14,11 +14,11 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities {
 
         }
         public Archer() : this(0,
-            3 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            3 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0.8f + GameManager.GetInstance().rand.RandfRange(0, 1),
+            1 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            2 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            0.5f + GameManager.GetInstance().rand.RandfRange(0.3f, 1),
             0 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
             GameManager.GetInstance().RandomElement()
             )
         { }

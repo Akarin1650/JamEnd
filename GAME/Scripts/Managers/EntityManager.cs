@@ -142,11 +142,6 @@ namespace Com.IsartDigital.Jam.Managers
                         summonText.Add(lValue);
 
                         break;
-                    case "2 damage when discard":
-                        damageWhenDiscard = true;
-                        summonText.Add(lValue);
-
-                        break;
 
                     case "folie":
                         //quand on discard on a le choix entre deux carte, on en pick une
@@ -172,8 +167,10 @@ namespace Com.IsartDigital.Jam.Managers
                         break;
 
                     case "win or loose":
+                        
                         int lIndex = (int)GD.RandRange(0, 1);
-                        if(lIndex == 0)
+                        GD.Print(lIndex);
+                        if (lIndex == 0)
                         {
                             pClass.Strength += currentEnemy.Strength;
                             pClass.Magic += currentEnemy.Magic;
@@ -257,11 +254,6 @@ namespace Com.IsartDigital.Jam.Managers
                         break;
                     case "-10 magic":
                         pClass.Magic = initialEnemyAttributes.iMagic + 7;
-                        enemyText.Add(lValue);
-
-                        break;
-                    case "when die make 10damage":
-                        isEnemyCreeper = true;
                         enemyText.Add(lValue);
 
                         break;

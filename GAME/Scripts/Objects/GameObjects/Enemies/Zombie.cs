@@ -16,9 +16,9 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Zombie() : this(
-                (int)GD.RandRange(15, 25),
-                (int)GD.RandRange(0, 3),
-                (int)GD.RandRange(0,3),
+                (int)GD.RandRange(20, 25),
+                (int)GD.RandRange(0, 2),
+                (int)GD.RandRange(0,1),
                 0,
                 0,
                 (int)GD.RandRange(3, 7),

@@ -16,9 +16,9 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Sorcier() : this(
-                (int)GD.RandRange(15, 25),
-                (int)GD.RandRange(0, 3),
-                (int)GD.RandRange(4, 7),
+                (int)GD.RandRange(15, 20),
+                (int)GD.RandRange(0, 2),
+                (int)GD.RandRange(5, 8),
                 0,
                 0,
                 (int)GD.RandRange(0, 3),

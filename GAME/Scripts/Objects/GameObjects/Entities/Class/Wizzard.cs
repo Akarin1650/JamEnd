@@ -14,11 +14,11 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities {
 
         }
         public Wizzard() : this(0,
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
             7 + GameManager.GetInstance().rand.RandiRange(0, 3),
-            0.6f + GameManager.GetInstance().rand.RandfRange(0, 1),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            0.6f + GameManager.GetInstance().rand.RandfRange(0, 0.5f),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 4),
             GameManager.GetInstance().RandomElement()) { }
     }
 }

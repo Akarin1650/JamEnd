@@ -15,10 +15,10 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities
 
         }
         public Tank() : this(0,
-            3 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0.4f + GameManager.GetInstance().rand.RandfRange(0, 1),
-            7 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            2 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            0.5f + GameManager.GetInstance().rand.RandfRange(0, 0.7f),
+            4 + GameManager.GetInstance().rand.RandiRange(0, 5),
             0 + GameManager.GetInstance().rand.RandiRange(0, 5),
             GameManager.GetInstance().RandomElement()) { }
     }

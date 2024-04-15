@@ -16,12 +16,12 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Dragon() : this(
-                (int)GD.RandRange(25, 35),
+                (int)GD.RandRange(30, 40),
+                (int)GD.RandRange(3, 5),
                 (int)GD.RandRange(6, 9),
-                (int)GD.RandRange(2, 5),
                 0,
                 0,
-                (int)GD.RandRange(5, 8),
+                (int)GD.RandRange(3, 6),
             GameManager.GetInstance().RandomElement()
             )
         { }

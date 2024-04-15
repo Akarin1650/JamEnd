@@ -16,9 +16,9 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities
         }
         public Knight() : this(0,
             5 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
-            0.6f + GameManager.GetInstance().rand.RandfRange(0, 1),
-            0 + GameManager.GetInstance().rand.RandiRange(0, 5),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 3),
+            0.6f + GameManager.GetInstance().rand.RandfRange(0, 0.6f),
+            0 + GameManager.GetInstance().rand.RandiRange(0, 4),
             2 + GameManager.GetInstance().rand.RandiRange(0, 5),
             GameManager.GetInstance().RandomElement()) { }
     }

@@ -372,7 +372,6 @@ squeletonFacotry = ExtResource( 22 )
 witcherFacotry = ExtResource( 23 )
 ogreFacotry = ExtResource( 21 )
 dragonFacotry = ExtResource( 20 )
-loseScreen = NodePath("GameContainer/CanvasLayer")
 settingButtonPath = NodePath("GameContainer/Settings")
 
 [node name="HomingSpawner" parent="." instance=ExtResource( 19 )]
@@ -517,9 +516,6 @@ margin_bottom = -1080.0
 
 [node name="placeholderWE" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
-
-[node name="TitleCard" parent="." instance=ExtResource( 2 )]
-visible = false
 
 [node name="MainMenu" parent="." instance=ExtResource( 13 )]
 position = Vector2( 872, -1084 )

@@ -96,8 +96,12 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities
         {
             if (pPlayer.Health > 0 && pEnemy.Health > 0)
             {
-                int lDamage = Math.Max(MSum(pEnemy) - pSummon.Armor, 0);
-                pPlayer.Health -= lDamage;
+                int lDamagea = Math.Max(Mathf.RoundToInt(pEnemy.Strength - (pSummon.Armor / 1.25f)), 0);
+                int lDamageb = Math.Max(Mathf.RoundToInt(pEnemy.Magic - (pSummon.Armor / 1.25f)), 0);
+                int lDamagec = Math.Max(Mathf.RoundToInt(pEnemy.Charisma - (pSummon.Armor / 1.25f)), 0);
+                pPlayer.Health -= lDamagea;
+                pPlayer.Health -= lDamageb;
+                pPlayer.Health -= lDamagec;
                 GD.Print("PLAYER HEALTH : " + pPlayer.Health);
 
 

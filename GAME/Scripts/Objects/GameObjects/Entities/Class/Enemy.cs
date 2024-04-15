@@ -51,7 +51,6 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities {
             {"+2 strength, +2 charism", "ATTRIBUTES_ENEMY_3" },
             {"-2 charism", "ATTRIBUTES_ENEMY_4" },
             {"-10 magic", "ATTRIBUTES_ENEMY_5" },
-            {"when die make 10damage", "ATTRIBUTES_ENEMY_6" },
             {"-10 charism", "ATTRIBUTES_ENEMY_7" },
             {"-10 strength", "ATTRIBUTES_ENEMY_8" },
             {"+1 Damage per turn", "ATTRIBUTES_ENEMY_9" },

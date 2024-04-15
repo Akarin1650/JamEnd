@@ -16,9 +16,9 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Squelette() : this(
-                (int)GD.RandRange(15, 25),
-                (int)GD.RandRange(4, 7),
-                (int)GD.RandRange(0, 3),
+                (int)GD.RandRange(10, 15),
+                (int)GD.RandRange(5, 9),
+                (int)GD.RandRange(0, 2),
                 0,
                 0,
                 (int)GD.RandRange(0, 3),

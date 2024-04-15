@@ -30,7 +30,6 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities
             { "-2:armor, +2:charism", "ATTRIBUTES_ALLIES_8" },
             { "-2:armor, +2:magic", "ATTRIBUTES_ALLIES_9" },
             { "roll magic, strength, charism", "ATTRIBUTES_ALLIES_10" },
-            { "2 damage when discard", "ATTRIBUTES_ALLIES_11" },
             { "folie", "ATTRIBUTES_ALLIES_12" },
             { "win or loose", "ATTRIBUTES_ALLIES_13" },
         };
