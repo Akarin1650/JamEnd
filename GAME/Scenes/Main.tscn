@@ -430,7 +430,7 @@ anims/RESET = SubResource( 24 )
 anims/Spawn = SubResource( 25 )
 
 [node name="PlayerSpawn" type="Node2D" parent="GameContainer"]
-position = Vector2( 1232.73, 427.708 )
+position = Vector2( 1200, 427.708 )
 scale = Vector2( 1.12359, 1.12359 )
 
 [node name="BarBorder" type="Sprite" parent="GameContainer/PlayerSpawn"]

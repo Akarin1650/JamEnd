@@ -369,7 +369,7 @@ namespace Com.IsartDigital.Jam.Managers
             }
 
 
-            int lNumber = (int)GD.RandRange(0, 2);
+            int lNumber = GameManager.GetInstance().rand.RandiRange(0, 2);
             if(lNumber == 0)
             {
                 lNAttributes = 1;
@@ -415,7 +415,7 @@ namespace Com.IsartDigital.Jam.Managers
 
             if(bossCount == 0)
             {
-                int lEnemyType = (int)GD.RandRange(0, 1);
+                int lEnemyType = GameManager.GetInstance().rand.RandiRange(0, 1);
                 if (lEnemyType == 0)
                 {
                     currentEnemy = new Dragon();
