@@ -33,7 +33,8 @@ public class Credits : Control
             "Yoann Tsitionis",
             "Alexis Martin",
             "Baptiste Vu Liem",
-            "Louis Peyrat"
+            "Louis Peyrat",
+            "Killian Ferreira Da Costa"
         },
         new List<string>
         {
@@ -42,7 +43,8 @@ public class Credits : Control
             "Yoann Tsitionis",
             "Alexis Martin",
             "Baptiste Vu Liem",
-            "Louis Peyrat"
+            "Louis Peyrat",
+            "Killian Ferreira Da Costa"
         },
         new List<string>
         {
