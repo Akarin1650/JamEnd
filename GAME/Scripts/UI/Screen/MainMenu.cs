@@ -19,8 +19,11 @@ namespace Com.IsartDigital.Jam.UI
 
         [Export] private NodePath mainMenuCameraPath = null;
         public Camera2D mainMenuCamera;
+        [Export] private NodePath creditsNodePath = null;
+        public Control creditsNode;
 
         [Export] private NodePath mainCameraPath = null;
+        [Export] private PackedScene creditsScene;
         public Camera2D mainCamera;
 
         private bool canOpening = true;
@@ -60,6 +63,7 @@ namespace Com.IsartDigital.Jam.UI
 
             mainMenuCamera = GetNode<Camera2D>(mainMenuCameraPath);
             mainCamera = GetNode<Camera2D>(mainCameraPath);
+            creditsNode = GetNode<Control>(creditsNodePath);
 
             startAnim = GetNode<AnimationPlayer>(startAnimPath);
             startAnim.Connect("animation_finished", this, nameof(StartAnimEnded));
@@ -115,12 +119,12 @@ namespace Com.IsartDigital.Jam.UI
             if (!lButton.isGrabbed)
             {
                 SoundManager.GetInstance().PlaySfxSound(SfxName.CLICK, 0, -20);
-                StartTween(lButton, nameof(LaunchCredit),creditScale);
+                LaunchCredit();
             }
         }
         private void LaunchCredit()
         {
-            //Credit.GetInstance().Show();
+            creditsNode.AddChild(creditsScene.Instance());
         }
 
 

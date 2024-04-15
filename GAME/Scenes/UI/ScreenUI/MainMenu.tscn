@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Scenes/UI/UtilityUI/RopeSegment.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/UI/UtilityUI/RopeAttache.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Ressource/Assets/MainMenu/SPR_Button_Pause_Quit.png" type="Texture" id=10]
 [ext_resource path="res://Ressource/Assets/MainMenu/SPR_Title_Pause.png" type="Texture" id=11]
 [ext_resource path="res://Ressource/Assets/MainMenu/Copyright_white.svg.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/UI/ScreenUI/CreditsScene.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 111, 36 )
@@ -258,7 +259,9 @@ optionPath = NodePath("Options/OptionBody/Button/TextureButton2")
 creditPath = NodePath("Credit/CreditBody/Button/TextureButton4")
 exitPath = NodePath("ExitButton/ExitBody/Button/TextureButton3")
 mainMenuCameraPath = NodePath("Camera2D")
+creditsNodePath = NodePath("Node2D2/Control")
 mainCameraPath = NodePath("AnimationPlayer")
+creditsScene = ExtResource( 13 )
 startAnimPath = NodePath("AnimationPlayer")
 
 [node name="Node2D" type="Node2D" parent="."]
@@ -861,6 +864,12 @@ zoom = Vector2( 0.6, 0.6 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/OpenningAnimation = SubResource( 11 )
 anims/RESET = SubResource( 12 )
+
+[node name="Node2D2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="Node2D2"]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="pressed" from="Play/PlayBody/Button/TextureButton" to="." method="OnStartPressed"]
 [connection signal="pressed" from="Options/OptionBody/Button/TextureButton2" to="." method="OnOptionsPressed"]

@@ -1,0 +1,181 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/UI/Screen/Credits.cs" type="Script" id=1]
+[ext_resource path="res://Ressource/Assets/pxfuel.jpg" type="Texture" id=2]
+[ext_resource path="res://Ressource/Assets/Chara/SPR_Fox.png" type="Texture" id=3]
+[ext_resource path="res://Ressource/Assets/Chara/SPR_Rabbit.png" type="Texture" id=4]
+[ext_resource path="res://Ressource/Assets/Chara/SPR_Frog.png" type="Texture" id=5]
+[ext_resource path="res://Ressource/Assets/Chara/SPR_Deer.png" type="Texture" id=6]
+[ext_resource path="res://Ressource/Assets/Chara/SPR_Sheep.png" type="Texture" id=7]
+[ext_resource path="res://Ressource/Particles/blur.gdshader" type="Shader" id=8]
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 8 )
+shader_param/amount = 2.5
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment() {
+    float aspect = (1.0 / SCREEN_PIXEL_SIZE).y / (1.0 / SCREEN_PIXEL_SIZE).x;
+    float value;
+    vec2 uv = FRAGCOORD.xy.xy / (1.0 / SCREEN_PIXEL_SIZE).x;
+    uv -= vec2(0.5, 0.5 * aspect);
+
+    float rot = radians(45.0);
+    float s = sin(rot);
+    float c = cos(rot);
+
+    float newX = uv.x * c - uv.y * s;
+    float newY = uv.x * s + uv.y * c;
+
+    uv = vec2(newX, newY);
+
+    uv += vec2(0.5, 0.5 * aspect);
+    uv.y += 0.5 * (1.0 - aspect);
+
+    vec2 pos = 10.0 * uv;
+    vec2 rep = fract(pos);
+    float dist = 2.0 * min(min(rep.x, 1.0 - rep.x), min(rep.y, 1.0 - rep.y));
+    float squareDist = length((floor(pos) + vec2(0.5)) - vec2(5.0));
+
+    float edge = sin(TIME - squareDist * 0.5) * 0.5 + 0.5;
+    edge = (TIME - squareDist * 0.5) * 0.5;
+    edge = 2.0 * fract(edge * 0.5);
+
+    value = fract(dist * 2.0);
+    value = mix(value, 1.0 - value, step(1.0, edge));
+    edge = pow(abs(1.0 - edge), 2.0);
+    value = smoothstep(edge - 0.05, edge, 0.95 * value);
+    value += squareDist * 0.1;
+
+    COLOR = mix(vec4(1.0, 1.0, 1.0, 1.0), vec4(0.5, 0.75, 1.0, 1.0), value);
+    COLOR.a = 0.25 * clamp(value, 0.0, 1.0);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Spawn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( -2, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="CreditsScene" type="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+animPath = NodePath("AnimationPlayer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 5 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="Background" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+material = SubResource( 2 )
+position = Vector2( 961.111, 539.5 )
+scale = Vector2( 0.750868, 0.759028 )
+texture = ExtResource( 2 )
+
+[node name="SprDeer" type="Sprite" parent="."]
+position = Vector2( 1153, 591 )
+rotation = -3.14159
+scale = Vector2( 0.450413, -0.450413 )
+texture = ExtResource( 6 )
+
+[node name="SprSheep" type="Sprite" parent="."]
+position = Vector2( 1658, 567 )
+rotation = 3.14159
+scale = Vector2( 0.45, -0.450413 )
+texture = ExtResource( 7 )
+
+[node name="SprFox" type="Sprite" parent="."]
+position = Vector2( 1424, 799 )
+scale = Vector2( -0.45, 0.450413 )
+texture = ExtResource( 3 )
+
+[node name="SprFrog" type="Sprite" parent="."]
+position = Vector2( 1212.6, 882.764 )
+scale = Vector2( -0.45, 0.45 )
+texture = ExtResource( 5 )
+
+[node name="SprRabbit" type="Sprite" parent="."]
+position = Vector2( 1764.59, 755.36 )
+scale = Vector2( 0.364852, 0.364852 )
+texture = ExtResource( 4 )
+
+[node name="CreditsContainer" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1.0
+
+[node name="Line" type="Label" parent="CreditsContainer"]
+anchor_right = 1.0
+margin_left = 150.0
+margin_top = 1081.0
+margin_right = -1.0
+margin_bottom = 1095.0
+size_flags_horizontal = 3
+text = "Credits line"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Spawn"
+anims/RESET = SubResource( 3 )
+anims/Spawn = SubResource( 4 )
