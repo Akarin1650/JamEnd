@@ -1,7 +1,9 @@
 using Com.IsartDigital.Jam.Managers;
+using Com.IsartDigital.ProjectName;
 using Com.IsartDigital.Shmup.Manager;
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 namespace Com.IsartDigital.Jam.UI
 {
@@ -21,6 +23,8 @@ namespace Com.IsartDigital.Jam.UI
         public Camera2D mainMenuCamera;
         [Export] private NodePath creditsNodePath = null;
         public Control creditsNode;
+        [Export] private NodePath tutoPath = null;
+        public Node2D tuto;
 
         [Export] private NodePath mainCameraPath = null;
         [Export] private PackedScene creditsScene;
@@ -64,6 +68,7 @@ namespace Com.IsartDigital.Jam.UI
             mainMenuCamera = GetNode<Camera2D>(mainMenuCameraPath);
             mainCamera = GetNode<Camera2D>(mainCameraPath);
             creditsNode = GetNode<Control>(creditsNodePath);
+            tuto = GetNode<Node2D>(tutoPath);
 
             startAnim = GetNode<AnimationPlayer>(startAnimPath);
             startAnim.Connect("animation_finished", this, nameof(StartAnimEnded));
@@ -86,6 +91,7 @@ namespace Com.IsartDigital.Jam.UI
                 SoundManager.GetInstance().FadeInMusic(ambianceTavern, 40, 2);
 
                 startAnim.Play("OpenningAnimation");
+                LaunchTuto();
             }
         }
         private void LaunchStart()
@@ -151,6 +157,12 @@ namespace Com.IsartDigital.Jam.UI
 
             GameManager.GetInstance().hpPlayerBar.Value = GameManager.GetInstance().hpPlayerBar.MaxValue;
             GameManager.GetInstance().animHpPlayer.Play("Spawn");
+        }
+
+        private async Task LaunchTuto()
+        {
+            await UtilsCoroutine.WaitForSeconds(3.2f);
+            TutoManager.GetInstance().StartAnim();
         }
     }
 }

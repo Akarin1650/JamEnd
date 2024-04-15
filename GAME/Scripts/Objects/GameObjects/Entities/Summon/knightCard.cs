@@ -72,8 +72,8 @@ namespace Com.IsartDigital.Jam.Cards
                     {
                         RectGlobalPosition = Teleport.GetInstance().GlobalPosition - RectSize / 2;
                         anim.Play("Destroy");
-                        SoundManager.GetInstance().PlaySfxSound(SfxName.CARD_PLAY, 0, 0);
-                        SoundManager.GetInstance().PlaySfxSound(SfxName.SUMMON_DEER, 0, 0);
+                        SoundManager.GetInstance().PlaySfxSound(SfxName.CARD_PLAY, 0, -5);
+                        SoundManager.GetInstance().PlaySfxSound(SfxName.SUMMON_DEER, 0, -5);
                         Teleport.GetInstance().anim.Play("Destroy");
                         Teleport.GetInstance().isCardIn = false;
                         UtilsSignals.GetInstance().EmitSignal(nameof(UtilsSignals.OnStartFight));

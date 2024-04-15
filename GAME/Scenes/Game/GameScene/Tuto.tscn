@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Ressource/Assets/MainMenu/SPR_Background_Settings.png" type="Texture" id=1]
 [ext_resource path="res://Ressource/Assets/MainMenu/SPR_Rope.png" type="Texture" id=2]
@@ -10,6 +10,11 @@
 [ext_resource path="res://Ressource/Assets/SPR_Summoning_Circle.png" type="Texture" id=8]
 [ext_resource path="res://Ressource/Assets/Tuto/decorative-watercolor-of-wooden-arrow-png.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/Managers/TutoManager.cs" type="Script" id=10]
+[ext_resource path="res://Ressource/Particles/blur.gdshader" type="Shader" id=11]
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 11 )
+shader_param/amount = 2.5
 
 [sub_resource type="DynamicFontData" id=1]
 override_oversampling = 20.0
@@ -33,13 +38,554 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = SubResource( 3 )
 
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FirstTuto/Label4:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FirstTuto/SprCardRabbitHover:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FirstTuto/21215:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FirstTuto/SprSummoningCircle:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("FirstTuto/Label:percent_visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("FirstTuto/SprCardDeerHover:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FirstTuto/Label2:percent_visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FirstTuto/SprSkeleton:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("FirstTuto/Label3:percent_visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("SecondTuto/2024-04-15172040-Game(Debug):self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SecondTuto/Label5:percent_visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("SecondTuto/Label6:percent_visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SecondTuto/Label7:percent_visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("SecondTuto/Label8:percent_visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "SecondPanelApparition"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("SecondTuto/2024-04-15172040-Game(Debug):self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SecondTuto/Label5:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6, 1.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SecondTuto/Label6:percent_visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SecondTuto/Label7:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SecondTuto/Label8:percent_visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2.6, 3.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "TutoApparition"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("FirstTuto/Label4:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("FirstTuto/SprCardRabbitHover:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.3, 1.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("FirstTuto/21215:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1.6, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.607843 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("FirstTuto/SprSummoningCircle:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("FirstTuto/Label:percent_visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2.2, 2.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("FirstTuto/SprCardDeerHover:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 2.5, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("FirstTuto/Label2:percent_visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 2.8, 3.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("FirstTuto/SprSkeleton:self_modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 3, 3.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("FirstTuto/Label3:percent_visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 3.3, 3.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "ButtonEffect"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("FirstTuto/Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 2.92817, 0.757861, 4.28709 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SecondTuto/Node2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 2.92, 0.75, 4.28 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1.4, 1.4 ), Vector2( 1.3, 1.3 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("FirstTuto/Node2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SecondTuto/Node2D2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "QuitAnimation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
 [node name="Tuto" type="Node2D"]
-position = Vector2( 0, -52 )
+visible = false
+position = Vector2( 90, 19 )
+scale = Vector2( 0.9, 0.9 )
 script = ExtResource( 10 )
 nextButtonPath = NodePath("FirstTuto/Node2D/TextureButton")
 closeButtonPath = NodePath("SecondTuto/Node2D2/TextureButton")
 firstTutoPath = NodePath("FirstTuto")
 secondTutoPath = NodePath("SecondTuto")
+animationPath = NodePath("AnimationPlayer")
+quitAnimationPath = NodePath("QuitAnim")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 5 )
+margin_left = -394.0
+margin_top = -208.0
+margin_right = 2301.0
+margin_bottom = 1363.0
 
 [node name="Rope" type="Sprite" parent="."]
 position = Vector2( 255, -149 )
@@ -61,11 +607,13 @@ position = Vector2( -267, -8 )
 scale = Vector2( 1.3, 1.3 )
 
 [node name="SprCardDeerHover" type="Sprite" parent="FirstTuto"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1036.85, 525.222 )
 scale = Vector2( 0.533264, 0.533264 )
 texture = ExtResource( 3 )
 
 [node name="SprSkeleton" type="Sprite" parent="FirstTuto"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1512.69, 517.222 )
 scale = Vector2( 0.102932, 0.102932 )
 texture = ExtResource( 4 )
@@ -77,6 +625,7 @@ margin_right = 952.846
 margin_bottom = 547.172
 custom_fonts/font = SubResource( 2 )
 text = "Summon servants by playing cards"
+percent_visible = 0.0
 
 [node name="Label2" type="Label" parent="FirstTuto"]
 margin_left = 1117.85
@@ -85,6 +634,7 @@ margin_right = 1468.85
 margin_bottom = 545.172
 custom_fonts/font = SubResource( 2 )
 text = "to defeat enemies"
+percent_visible = 0.0
 
 [node name="Label3" type="Label" parent="FirstTuto"]
 margin_left = 406.923
@@ -93,6 +643,7 @@ margin_right = 1618.92
 margin_bottom = 714.335
 custom_fonts/font = SubResource( 2 )
 text = "Use left clik to open summons or monsters information"
+percent_visible = 0.0
 
 [node name="Label4" type="Label" parent="FirstTuto"]
 margin_left = 436.923
@@ -101,20 +652,23 @@ margin_right = 1489.92
 margin_bottom = 259.871
 custom_fonts/font = SubResource( 2 )
 text = "Use right click to drag cards to the summon portal"
+percent_visible = 0.0
 
 [node name="21215" type="Sprite" parent="FirstTuto"]
-modulate = Color( 1, 1, 1, 0.607843 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 936.473, 320.549 )
 rotation = -1.04083
 scale = Vector2( -0.355118, 0.355118 )
 texture = ExtResource( 7 )
 
 [node name="SprSummoningCircle" type="Sprite" parent="FirstTuto"]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 1132.92, 352.921 )
 scale = Vector2( 0.329983, 0.329983 )
 texture = ExtResource( 8 )
 
 [node name="SprCardRabbitHover" type="Sprite" parent="FirstTuto"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 738.663, 354.505 )
 scale = Vector2( 0.533, 0.533 )
 texture = ExtResource( 5 )
@@ -137,6 +691,7 @@ expand = true
 visible = false
 
 [node name="2024-04-15172040-Game(Debug)" type="Sprite" parent="SecondTuto"]
+self_modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 682, 624 )
 scale = Vector2( 0.425921, 0.425921 )
 texture = ExtResource( 6 )
@@ -150,6 +705,7 @@ custom_fonts/font = SubResource( 4 )
 text = "Strength, Magic and Charisma are damage stats.
 If theses stats are higher than the enemy stats, you inflict damage."
 autowrap = true
+percent_visible = 0.0
 
 [node name="Label6" type="Label" parent="SecondTuto"]
 margin_left = 1112.0
@@ -159,6 +715,7 @@ margin_bottom = 872.75
 custom_fonts/font = SubResource( 4 )
 text = "Efficiency is a damage multiplier."
 autowrap = true
+percent_visible = 0.0
 
 [node name="Label7" type="Label" parent="SecondTuto"]
 margin_left = 1112.0
@@ -168,6 +725,7 @@ margin_bottom = 1008.75
 custom_fonts/font = SubResource( 4 )
 text = "Defense reduce damage taken."
 autowrap = true
+percent_visible = 0.0
 
 [node name="Label8" type="Label" parent="SecondTuto"]
 margin_left = 1112.0
@@ -177,6 +735,7 @@ margin_bottom = 1142.75
 custom_fonts/font = SubResource( 4 )
 text = "The summons and enemies have passives that can modify their statistics or game mechanics."
 autowrap = true
+percent_visible = 0.0
 
 [node name="Node2D2" type="Node2D" parent="SecondTuto"]
 modulate = Color( 0.835294, 0.835294, 0.835294, 1 )
@@ -192,3 +751,17 @@ margin_bottom = 89.0
 rect_rotation = 39.9649
 texture_normal = ExtResource( 9 )
 expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 6 )
+anims/SecondPanelApparition = SubResource( 10 )
+anims/TutoApparition = SubResource( 7 )
+
+[node name="ButtonEffect" type="AnimationPlayer" parent="."]
+autoplay = "ButtonEffect"
+anims/ButtonEffect = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="QuitAnim" type="AnimationPlayer" parent="."]
+anims/QuitAnimation = SubResource( 11 )
+anims/RESET = SubResource( 12 )
