@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Particles/Homing.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Particles/Homing Orb.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Particles/Hit Animation.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 1.00759, 0, 0, Vector2( 1, 1 ), 0.94923, 0.0, 0, 0 ]
+
+[node name="Homing" type="Sprite"]
+self_modulate = Color( 0, 0.654902, 1, 1 )
+z_index = 1
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+trailWidthCurve = SubResource( 1 )
+hitAnimation = ExtResource( 3 )

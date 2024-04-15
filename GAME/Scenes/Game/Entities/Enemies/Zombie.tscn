@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Ressource/Assets/Enemy/SPR_Ennemy_Zombie.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Objects/GameObjects/Enemies/Zombie.cs" type="Script" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 710.0
+height = 480.0
+
+[node name="Default" type="Sprite"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+areaPath = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 23.3333, 66.6667 )
+shape = SubResource( 1 )

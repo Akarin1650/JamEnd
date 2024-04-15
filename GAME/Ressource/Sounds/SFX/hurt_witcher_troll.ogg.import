@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hurt_witcher_troll.ogg-bb505d5a09a0b52584d17063723b8c7a.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/hurt_witcher_troll.ogg"
+dest_files=[ "res://.import/hurt_witcher_troll.ogg-bb505d5a09a0b52584d17063723b8c7a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

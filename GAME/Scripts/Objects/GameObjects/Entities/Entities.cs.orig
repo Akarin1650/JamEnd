@@ -1,0 +1,79 @@
+using Com.IsartDigital.Jam.Managers;
+using Godot;
+using System;
+using System.Collections.Generic;
+
+// Author : Baptiste Simon
+namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities {
+
+	public class Entities : Node2D
+	{
+        public int Health { get; set; }
+        public int Strength { get; set; }
+        public int Magic { get; set; }
+        public float Efficiency { get; set; }
+        public int Armor { get; set; }
+        public int Charisma { get; set; }
+
+        public Entities(int pHealth, int pStrength, int pMagic, float pEfficiency, int pArmor, int pCharisma)
+        {
+            Health = pHealth;
+            Strength = pStrength;
+            Magic = pMagic;
+            Efficiency = pEfficiency;
+            Armor = pArmor;
+            Charisma = pCharisma;
+        }
+        public Entities() : this(0, 0, 0, 0, 0, 0) { }
+
+        public virtual void SummonAttackEnemy(Entities pSummon, Entities pEnemy)
+        {
+            if (pEnemy.Health > 0)
+            {
+                GD.Print($"HEALTH AVANT : {pEnemy.Health}");
+
+                int lStrengthCheck = Math.Max(pSummon.Strength - pEnemy.Strength, 0);
+                int lMagicCheck = Math.Max(pSummon.Magic - pEnemy.Magic, 0);
+                int lCharismaCheck = Math.Max(pSummon.Charisma - pEnemy.Charisma, 0);
+
+<<<<<<< HEAD
+            pEnemy.Health -= Mathf.RoundToInt((lStrengthCheck + lMagicCheck + lCharismaCheck) * pSummon.Efficiency);
+            GD.Print($"HEALTH APRES : {pEnemy.Health}");
+=======
+                pEnemy.Health -= (lStrengthCheck + lMagicCheck + lCharismaCheck) * pSummon.Efficiency;
+                GD.Print($"HEALTH APRES : {pEnemy.Health}");
+
+                if(pEnemy.Health <= 0)
+                {
+                    GD.Print("Enemy is dead");
+                    UtilsSignals.GetInstance().EmitSignal(nameof(UtilsSignals.OnEnemyDead));
+                }
+            }
+>>>>>>> fc3a42fa82eb1ba9af6e2ba9ebeeaa5ee24591e3
+        }
+
+        public virtual void EnemyAttackPlayer(Entities pPlayer, Entities pEnemy, Entities pSummon)
+        {
+            if (pPlayer.Health > 0 && pEnemy.Health > 0)
+            {
+                int lDamage = Math.Max(MSum(pEnemy) - pSummon.Armor, 0);
+                pPlayer.Health -= lDamage;
+
+                if (pPlayer.Health <= 0)
+                    GD.Print("Player is dead");
+                //emit signal here
+            }
+        }
+
+        private int MSum(Entities pToSum)
+        {
+            int lSum = (pToSum.Strength + pToSum.Magic + pToSum.Charisma) / 3;
+            return Mathf.RoundToInt(lSum);
+        }
+
+        protected override void Dispose(bool pDisposing)
+		{
+
+		}
+	}
+}

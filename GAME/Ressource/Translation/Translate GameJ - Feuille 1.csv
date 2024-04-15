@@ -1,0 +1,47 @@
+key,en,fr
+ATTRIBUTES_ALLIES_0,Can only carry a butter knife,N'arrive à porter qu'un couteau à beurre
+ATTRIBUTES_ALLIES_1,He was chosen by a twisted wand,Il a été choisi par une baguette tordue
+ATTRIBUTES_ALLIES_2,He came wearing his best armor,Il est venu avec sa plus belle armure
+ATTRIBUTES_ALLIES_3,He broke his glasses on the way in,Il a cassé ses lunettes en arrivant
+ATTRIBUTES_ALLIES_4,Wishes to stop his career and become a Bard,Souhaite arrêter sa carrière pour devenir Barde
+ATTRIBUTES_ALLIES_5,Comes from a 8 hour work out session,Sort d'une séance de musculation intense de 8h
+ATTRIBUTES_ALLIES_6,He was born with the will to be a warrior,Il est né avec la volonté d'être un guerrier
+ATTRIBUTES_ALLIES_7,He's completely drunk,Il est complètement bourré
+ATTRIBUTES_ALLIES_8,His shining armor makes him very bright,Son armure scintillante le rend très visible
+ATTRIBUTES_ALLIES_9,He never learned to make defensive spells,Il n'a jamais appris à faire des sorts défensifs
+ATTRIBUTES_ALLIES_10,Doesn't know what he's doing,Ne sait pas ce qu'il fait
+ATTRIBUTES_ALLIES_11,Dare to abandon me and you'll pay for it,Osez m'abandonnez et vous le paierez
+ATTRIBUTES_ALLIES_12,Madness is unpredictable... You become violent but vulnerable,La folie est imprévisible... Vous devenez violent mais vulnérable
+ATTRIBUTES_ALLIES_13,"Flip a coin? heads you win, tails I win...","On lance une pièce ? face tu gagnes, pile je gagne..."
+ATTRIBUTES_ENEMY_0,Weakness: the drunken man technique,Faiblesse : technique de l'homme ivre
+ATTRIBUTES_ENEMY_1,Mana overdose,Overdose de mana
+ATTRIBUTES_ENEMY_2,Bipolar,Bipolaire
+ATTRIBUTES_ENEMY_3,Fearing butter,Térroriser par le beurre
+ATTRIBUTES_ENEMY_4,It's your father,C'est ton père
+ATTRIBUTES_ENEMY_5,"For him, magic doesn't exists","Pour lui, la magie n'existe pas"
+ATTRIBUTES_ENEMY_6,Bad loser,Mauvais perdant
+ATTRIBUTES_ENEMY_7,Stone Heart,Coeur de pierre
+ATTRIBUTES_ENEMY_8,Rampart,Rempart
+ATTRIBUTES_ENEMY_9,Impatient,Impatient
+ATTRIBUTES_ENEMY_10,Myopic,Myope
+ATTRIBUTES_ENEMY_11,Thick skin,Peau épaisse
+ATTRIBUTES_ENEMY_12,It's so big you can't miss it!,Il est tellement grand que tu ne peux pas le loupé!
+ATTRIBUTES_ENEMY_13,Collector,Collectionneur
+ATTRIBUTES_ENEMY_14,Gravedigger,Fossoyeur
+PLAY,Play,Jouer
+NAME,Name,Nom
+EFFICIENCY,EFFICIENCY,EFFICACITE
+STRENGTH,STRENGTH,FORCE
+MAGIC,MAGIC,MAGIE
+CHARISMA,CHARISMA,CHARISME
+DEFENSE,DEFENSE,ARMURE
+DRAGON_DESCRIPTION,"Tales and legends only gives a glimpse of his legendary strength, and you appear to him as nothing more than an insect... But don't panic, this one has forgotten how to breathe fire.","Les contes et légendes ne font que donner un aperçu de sa force légendaire, vous ne paraissez être qu'un insecte à ses yeux... Mais pas de panique, celui-ci a oublié comment cracher du feu."
+DEMON_DESCRIPTION,"Lord of the ogres, despite his stature and gigantic mass of weapons, he hates physical violence and prefers to send you his destructive spells.","Seigneur des ogres, malgrès sa carrure et sa gigantesque masse d'armes il déteste la violence physique et préfèrera vous envoyer ses sorts destructeurs."
+ZOMBIE_DESCRIPTION,"Formerly CEO of a mercenary firm where he was nicknamed ""The Dictator"", he has become a frail, banal zombie who still has style at its best.","Anciennement PDG d'une boite de mercenaire où il était surnomé ""le dictateur"", il est devenu un frêle zombie banale mais qui a toujours le style à son paroxisme."
+WITCHER_DESCRIPTION,A renowned mage known for his powerful and dangerous spells. These experiments have led to failures such as the distortion of his legs...,Mage de renomé connus pour ses sortilèges puissants et dangereux. Ces expériences ont pus mené à quelque échec tels que la distortion de ses jambes...
+SQUELETON_DESCRIPTION,"Even though he's marked fragile on the shipment, with his sword he specializes in making others as fragile as himself.","Même si à l'expédition il est annoté fragile, à l'aide de son épée, il est spécialisé dans le fait de rendre les autres aussi fragile que lui"
+DRAGON_NAME,DRAGON,DRAGON
+DEMON_NAME,OGRE,OGRE
+ZOMBIE_NAME,ZOMBIE,ZOMBIE
+WITCHER_NAME,WITCHER,SORCIER
+SQUELETON_NAME,SQUELETON,SQUELETTE

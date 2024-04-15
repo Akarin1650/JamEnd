@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/skeleton_hurt.ogg-e14d3f48cae0b132a375110a85a56d12.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/skeleton_hurt.ogg"
+dest_files=[ "res://.import/skeleton_hurt.ogg-e14d3f48cae0b132a375110a85a56d12.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

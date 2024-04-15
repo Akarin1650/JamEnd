@@ -1,0 +1,53 @@
+[gd_resource type="ParticlesMaterial" load_steps=9 format=2]
+
+[sub_resource type="Gradient" id=9]
+offsets = PoolRealArray( 0.00520833, 0.362245, 0.520408, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 0.554688, 0.94912, 1, 1, 0.742188, 1, 0.96299, 0.78, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=14]
+gradient = SubResource( 9 )
+
+[sub_resource type="Curve" id=13]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0, -96.0289 ), 0.0, 0.0, 0, 0, Vector2( 1, 200 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=15]
+curve = SubResource( 13 )
+
+[sub_resource type="Curve" id=10]
+_data = [ Vector2( 0, 0.465909 ), 0.0, -0.501178, 0, 0, Vector2( 1, 0.0216606 ), -0.923274, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=16]
+curve = SubResource( 10 )
+
+[sub_resource type="Curve" id=11]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.481047 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=17]
+curve = SubResource( 11 )
+
+[resource]
+lifetime_randomness = 1.0
+trail_divisor = 2
+trail_size_modifier = SubResource( 17 )
+emission_shape = 5
+emission_ring_radius = 30.0
+emission_ring_inner_radius = 10.0
+emission_ring_height = 62.26
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 170.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 0.5
+linear_accel_curve = SubResource( 15 )
+radial_accel = 11.8
+scale = 0.07
+scale_curve = SubResource( 16 )
+color = Color( 1.50196, 1.50196, 1.50196, 1 )
+color_ramp = SubResource( 14 )

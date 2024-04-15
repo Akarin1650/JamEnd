@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Particles/HomingSpawner.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Particles/Homing.tscn" type="PackedScene" id=2]
+
+[node name="HomingSpawner" type="Node2D"]
+script = ExtResource( 1 )
+homming = ExtResource( 2 )

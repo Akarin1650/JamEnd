@@ -1,0 +1,868 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://Scenes/UI/UtilityUI/RopeSegment.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI/UtilityUI/RopeAttache.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_Button_Settings.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/UI/Screen/MainMenu.cs" type="Script" id=4]
+[ext_resource path="res://Scripts/UI/Tool/ButtonEffect.cs" type="Script" id=5]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_TitleScreen_Background (1).png" type="Texture" id=6]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_TitleScreen_Rooftop (1).png" type="Texture" id=7]
+[ext_resource path="res://Ressource/Assets/MainMenu/white-circle-fade.png" type="Texture" id=8]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_Button_Play.png" type="Texture" id=9]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_Button_Pause_Quit.png" type="Texture" id=10]
+[ext_resource path="res://Ressource/Assets/MainMenu/SPR_Title_Pause.png" type="Texture" id=11]
+[ext_resource path="res://Ressource/Assets/MainMenu/Copyright_white.svg.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 111, 36 )
+
+[sub_resource type="DynamicFontData" id=13]
+override_oversampling = 10.0
+font_path = "res://Ressource/Font/Jersey_20/Jersey20-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 59
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=17]
+override_oversampling = 20.0
+font_path = "res://Ressource/Font/Jersey_10/Jersey10-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 127
+font_data = SubResource( 17 )
+
+[sub_resource type="DynamicFontData" id=15]
+override_oversampling = 20.0
+font_path = "res://Ressource/Font/Jersey_10/Jersey10-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=16]
+size = 103
+font_data = SubResource( 15 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 776.5, 150 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 885.5, 156 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 250.5, 530.5 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 228.5, 557 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "OpenningAnimation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 3.13833, 3.13834 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 0.05, 0.05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 3.13834, 3.13834 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 3.13834, 3.13834 ),
+"update": 0,
+"values": [ Vector2( 512, 322 ), Vector2( 513, 259 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ropes:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -630 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Wall/RigidBody2D5/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/FadeCircle:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 3.13834, 3.13 ),
+"update": 0,
+"values": [ Vector2( 0.00297619, 0.00297619 ), Vector2( 3, 3 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D/FadeCircle:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D/FadeCircle:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 512, 322 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Ropes:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Wall/RigidBody2D5/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Node2D/FadeCircle:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.00297619, 0.00297619 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Node2D/FadeCircle:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Node2D/FadeCircle:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource( 4 )
+startPath = NodePath("Play/PlayBody/Button/TextureButton")
+optionPath = NodePath("Options/OptionBody/Button/TextureButton2")
+creditPath = NodePath("Credit/CreditBody/Button/TextureButton4")
+exitPath = NodePath("ExitButton/ExitBody/Button/TextureButton3")
+mainMenuCameraPath = NodePath("Camera2D")
+mainCameraPath = NodePath("AnimationPlayer")
+startAnimPath = NodePath("AnimationPlayer")
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 3
+
+[node name="FadeCircle" type="Sprite" parent="Node2D"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 503, 259 )
+scale = Vector2( 0.00297619, 0.00297619 )
+texture = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+margin_left = -105.0
+margin_top = -35.0
+margin_right = 1190.0
+margin_bottom = 696.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="BackGround" type="Sprite" parent="."]
+position = Vector2( 512, 322 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 6 )
+
+[node name="RoofTop" type="Sprite" parent="."]
+position = Vector2( 503.5, 74.5 )
+scale = Vector2( 0.599564, 0.610236 )
+z_index = 2
+texture = ExtResource( 7 )
+
+[node name="Title" type="Node2D" parent="."]
+position = Vector2( 0, -225 )
+z_index = 1
+
+[node name="TitleBody" type="RigidBody2D" parent="Title"]
+position = Vector2( 504.467, 386 )
+collision_layer = 2
+collision_mask = 2
+mass = 5.56
+gravity_scale = 12.18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Title/TitleBody"]
+position = Vector2( 0, -1 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 6 )
+
+[node name="Button" type="Node2D" parent="Title/TitleBody"]
+position = Vector2( -355.467, -119 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="TextureButton" type="TextureButton" parent="Title/TitleBody/Button"]
+margin_left = 252.0
+margin_top = 86.0
+margin_right = 696.0
+margin_bottom = 231.0
+rect_pivot_offset = Vector2( 222, 74 )
+texture_normal = ExtResource( 11 )
+expand = true
+script = ExtResource( 5 )
+physicBodyPath = NodePath("../..")
+
+[node name="Label" type="Label" parent="Title/TitleBody/Button/TextureButton"]
+margin_left = -154.667
+margin_top = -35.3334
+margin_right = 645.333
+margin_bottom = 202.667
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 14 )
+text = "SUMMON INC"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Title/TitleBody/Button/TextureButton"]
+position = Vector2( 77.3301, 83.333 )
+scale = Vector2( 0.0169246, 0.0169246 )
+texture = ExtResource( 12 )
+
+[node name="Play" type="Node2D" parent="."]
+position = Vector2( 0, -225 )
+z_index = 1
+
+[node name="PlayBody" type="RigidBody2D" parent="Play"]
+position = Vector2( 504.467, 504 )
+collision_layer = 2
+collision_mask = 2
+mass = 5.56
+gravity_scale = 12.18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Play/PlayBody"]
+position = Vector2( 0, -1 )
+shape = SubResource( 6 )
+
+[node name="Button" type="Node2D" parent="Play/PlayBody"]
+position = Vector2( -237, -80 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="TextureButton" type="TextureButton" parent="Play/PlayBody/Button"]
+margin_left = 252.0
+margin_top = 86.0
+margin_right = 696.0
+margin_bottom = 231.0
+rect_pivot_offset = Vector2( 222, 74 )
+texture_normal = ExtResource( 11 )
+expand = true
+script = ExtResource( 5 )
+physicBodyPath = NodePath("../..")
+
+[node name="Label" type="Label" parent="Play/PlayBody/Button/TextureButton"]
+margin_left = -182.5
+margin_top = -34.0
+margin_right = 617.5
+margin_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 18 )
+text = "PLAY"
+align = 1
+valign = 1
+
+[node name="Options" type="Node2D" parent="."]
+position = Vector2( 0, -113 )
+z_index = 1
+
+[node name="OptionBody" type="RigidBody2D" parent="Options"]
+position = Vector2( 417, 491 )
+collision_layer = 2
+collision_mask = 2
+mass = 5.56
+gravity_scale = 12.18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Options/OptionBody"]
+position = Vector2( 0, -1 )
+scale = Vector2( 0.75, 0.75 )
+shape = SubResource( 6 )
+
+[node name="Button" type="Node2D" parent="Options/OptionBody"]
+position = Vector2( -231.467, -183 )
+scale = Vector2( 0.375, 0.375 )
+
+[node name="TextureButton2" type="TextureButton" parent="Options/OptionBody/Button"]
+margin_left = 394.0
+margin_top = 412.0
+margin_right = 838.0
+margin_bottom = 557.0
+rect_pivot_offset = Vector2( 222, 74 )
+texture_normal = ExtResource( 9 )
+expand = true
+script = ExtResource( 5 )
+physicBodyPath = NodePath("../..")
+
+[node name="Label" type="Label" parent="Options/OptionBody/Button/TextureButton2"]
+margin_left = -182.5
+margin_top = -41.3334
+margin_right = 617.5
+margin_bottom = 196.667
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 16 )
+text = "OPTIONS"
+align = 1
+valign = 1
+
+[node name="Credit" type="Node2D" parent="."]
+position = Vector2( -1.6, 32.7778 )
+z_index = 1
+
+[node name="CreditBody" type="RigidBody2D" parent="Credit"]
+position = Vector2( 593.6, 345.222 )
+collision_layer = 2
+collision_mask = 2
+mass = 5.56
+gravity_scale = 12.18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Credit/CreditBody"]
+position = Vector2( 0, -1 )
+scale = Vector2( 0.75, 0.75 )
+shape = SubResource( 6 )
+
+[node name="Button" type="Node2D" parent="Credit/CreditBody"]
+position = Vector2( -230.894, -182.051 )
+scale = Vector2( 0.375, 0.375 )
+
+[node name="TextureButton4" type="TextureButton" parent="Credit/CreditBody/Button"]
+margin_left = 394.0
+margin_top = 412.0
+margin_right = 838.0
+margin_bottom = 557.0
+rect_pivot_offset = Vector2( 222, 74 )
+texture_normal = ExtResource( 3 )
+expand = true
+script = ExtResource( 5 )
+physicBodyPath = NodePath("../..")
+
+[node name="Label" type="Label" parent="Credit/CreditBody/Button/TextureButton4"]
+margin_left = -180.951
+margin_top = -41.1978
+margin_right = 619.049
+margin_bottom = 196.802
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 16 )
+text = "CREDITS"
+align = 1
+valign = 1
+
+[node name="ExitButton" type="Node2D" parent="."]
+position = Vector2( -1.6, 70.7778 )
+z_index = 1
+
+[node name="ExitBody" type="RigidBody2D" parent="ExitButton"]
+position = Vector2( 507.172, 422.222 )
+rotation = 0.111701
+collision_layer = 2
+collision_mask = 2
+mass = 5.56
+gravity_scale = 12.18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitButton/ExitBody"]
+position = Vector2( 0, -1 )
+shape = SubResource( 6 )
+
+[node name="Button" type="Node2D" parent="ExitButton/ExitBody"]
+position = Vector2( -308, -243 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="TextureButton3" type="TextureButton" parent="ExitButton/ExitBody/Button"]
+margin_left = 394.0
+margin_top = 411.0
+margin_right = 838.0
+margin_bottom = 556.0
+rect_pivot_offset = Vector2( 222, 75 )
+texture_normal = ExtResource( 10 )
+expand = true
+script = ExtResource( 5 )
+physicBodyPath = NodePath("../..")
+
+[node name="Label" type="Label" parent="ExitButton/ExitBody/Button/TextureButton3"]
+margin_left = -181.572
+margin_top = -38.723
+margin_right = 618.428
+margin_bottom = 199.277
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = SubResource( 16 )
+text = "EXIT"
+align = 1
+valign = 1
+
+[node name="Wall" type="Node2D" parent="."]
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="Wall"]
+position = Vector2( 0, 639 )
+collision_layer = 3
+collision_mask = 3
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/RigidBody2D2"]
+position = Vector2( 511.5, 140 )
+shape = SubResource( 9 )
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="Wall"]
+position = Vector2( -2, -40 )
+collision_layer = 3
+collision_mask = 3
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/RigidBody2D5"]
+position = Vector2( 511.5, -146 )
+shape = SubResource( 7 )
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="Wall"]
+position = Vector2( -74, 610 )
+collision_layer = 3
+collision_mask = 3
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/RigidBody2D3"]
+position = Vector2( -240.567, -331.5 )
+shape = SubResource( 10 )
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="Wall"]
+position = Vector2( 1097, 610 )
+collision_layer = 3
+collision_mask = 3
+mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall/RigidBody2D4"]
+position = Vector2( 218.5, -284 )
+shape = SubResource( 8 )
+
+[node name="Ropes" type="Node2D" parent="."]
+
+[node name="RopeAttache" parent="Ropes" instance=ExtResource( 2 )]
+position = Vector2( 418, -39 )
+collision_layer = 2147483648
+collision_mask = 2147483648
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 10 )
+node_a = NodePath("..")
+node_b = NodePath("../RopeSegment")
+softness = 0.2
+
+[node name="RopeSegment" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 30 )
+node_a = NodePath("../RopeSegment")
+node_b = NodePath("../RopeSegment2")
+softness = 0.2
+
+[node name="RopeSegment2" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 50 )
+node_a = NodePath("../RopeSegment2")
+node_b = NodePath("../RopeSegment3")
+softness = 0.2
+
+[node name="RopeSegment3" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 60 )
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 70 )
+node_a = NodePath("../RopeSegment3")
+node_b = NodePath("../RopeSegment4")
+softness = 0.2
+
+[node name="RopeSegment4" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 80 )
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 90 )
+node_a = NodePath("../RopeSegment4")
+node_b = NodePath("../RopeSegment5")
+softness = 0.2
+
+[node name="RopeSegment5" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 100 )
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 110 )
+node_a = NodePath("../RopeSegment5")
+node_b = NodePath("../RopeSegment6")
+softness = 0.2
+
+[node name="RopeSegment6" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 120 )
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 130 )
+node_a = NodePath("../RopeSegment6")
+node_b = NodePath("../RopeSegment7")
+softness = 0.2
+
+[node name="RopeSegment7" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 140 )
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 150 )
+node_a = NodePath("../RopeSegment7")
+node_b = NodePath("../../../Title/TitleBody")
+softness = 0.2
+
+[node name="PinJoint2D19" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 250 )
+node_a = NodePath("../../../Title/TitleBody")
+node_b = NodePath("../RopeSegment11")
+softness = 0.2
+
+[node name="RopeSegment11" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 260 )
+
+[node name="PinJoint2D20" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 270 )
+node_a = NodePath("../RopeSegment11")
+node_b = NodePath("../RopeSegment14")
+softness = 0.2
+
+[node name="RopeSegment14" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 280 )
+
+[node name="PinJoint2D21" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 290 )
+node_a = NodePath("../RopeSegment14")
+node_b = NodePath("../../../Play/PlayBody")
+softness = 0.2
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 353 )
+node_a = NodePath("../../../Play/PlayBody")
+node_b = NodePath("../RopeSegment9")
+softness = 0.2
+
+[node name="RopeSegment9" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 363 )
+
+[node name="PinJoint2D10" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 373 )
+node_a = NodePath("../RopeSegment9")
+node_b = NodePath("../RopeSegment10")
+softness = 0.2
+
+[node name="RopeSegment10" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 383 )
+
+[node name="PinJoint2D11" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 393 )
+node_a = NodePath("../RopeSegment10")
+node_b = NodePath("../../../Options/OptionBody")
+softness = 0.2
+
+[node name="PinJoint2D12" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 446 )
+node_a = NodePath("../../../Options/OptionBody")
+node_b = NodePath("../RopeSegment12")
+softness = 0.2
+
+[node name="RopeSegment12" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 456 )
+
+[node name="PinJoint2D13" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 466 )
+node_a = NodePath("../RopeSegment12")
+node_b = NodePath("../RopeSegment13")
+softness = 0.2
+
+[node name="RopeSegment13" parent="Ropes/RopeAttache" instance=ExtResource( 1 )]
+position = Vector2( 0, 476 )
+
+[node name="PinJoint2D14" type="PinJoint2D" parent="Ropes/RopeAttache"]
+position = Vector2( 0, 486 )
+node_a = NodePath("../RopeSegment13")
+node_b = NodePath("../../../ExitButton/ExitBody")
+softness = 0.2
+
+[node name="RopeAttache2" parent="Ropes" instance=ExtResource( 2 )]
+position = Vector2( 592, -39 )
+collision_layer = 2147483648
+collision_mask = 2147483648
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 10 )
+node_a = NodePath("..")
+node_b = NodePath("../RopeSegment")
+softness = 0.2
+
+[node name="RopeSegment" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 30 )
+node_a = NodePath("../RopeSegment")
+node_b = NodePath("../RopeSegment2")
+softness = 0.2
+
+[node name="RopeSegment2" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 40 )
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 50 )
+node_a = NodePath("../RopeSegment2")
+node_b = NodePath("../RopeSegment3")
+softness = 0.2
+
+[node name="RopeSegment3" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 60 )
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 70 )
+node_a = NodePath("../RopeSegment3")
+node_b = NodePath("../RopeSegment4")
+softness = 0.2
+
+[node name="RopeSegment4" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 80 )
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 90 )
+node_a = NodePath("../RopeSegment4")
+node_b = NodePath("../RopeSegment5")
+softness = 0.2
+
+[node name="RopeSegment5" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 100 )
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 110 )
+node_a = NodePath("../RopeSegment5")
+node_b = NodePath("../RopeSegment6")
+softness = 0.2
+
+[node name="RopeSegment6" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 120 )
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 130 )
+node_a = NodePath("../RopeSegment6")
+node_b = NodePath("../RopeSegment7")
+softness = 0.2
+
+[node name="RopeSegment7" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 140 )
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 150 )
+node_a = NodePath("../RopeSegment7")
+node_b = NodePath("../../../Title/TitleBody")
+softness = 0.2
+
+[node name="PinJoint2D17" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 251 )
+node_a = NodePath("../../../Title/TitleBody")
+node_b = NodePath("../RopeSegment11")
+softness = 0.2
+
+[node name="RopeSegment11" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 261 )
+
+[node name="PinJoint2D19" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 271 )
+node_a = NodePath("../RopeSegment11")
+node_b = NodePath("../RopeSegment16")
+softness = 0.2
+
+[node name="RopeSegment16" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 281 )
+
+[node name="PinJoint2D20" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 291 )
+node_a = NodePath("../RopeSegment16")
+node_b = NodePath("../../../Play/PlayBody")
+softness = 0.2
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 353 )
+node_a = NodePath("../../../Play/PlayBody")
+node_b = NodePath("../RopeSegment9")
+softness = 0.2
+
+[node name="RopeSegment9" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 363 )
+
+[node name="PinJoint2D10" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 373 )
+node_a = NodePath("../RopeSegment9")
+node_b = NodePath("../RopeSegment10")
+softness = 0.2
+
+[node name="RopeSegment10" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 383 )
+
+[node name="PinJoint2D11" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 393 )
+node_a = NodePath("../RopeSegment10")
+node_b = NodePath("../../../Credit/CreditBody")
+softness = 0.2
+
+[node name="PinJoint2D12" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 446 )
+node_a = NodePath("../../../Credit/CreditBody")
+node_b = NodePath("../RopeSegment12")
+softness = 0.2
+
+[node name="RopeSegment12" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 456 )
+
+[node name="PinJoint2D13" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 466 )
+node_a = NodePath("../RopeSegment12")
+node_b = NodePath("../RopeSegment13")
+softness = 0.2
+
+[node name="RopeSegment13" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 476 )
+
+[node name="PinJoint2D14" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 486 )
+node_a = NodePath("../RopeSegment13")
+node_b = NodePath("../RopeSegment14")
+softness = 0.2
+
+[node name="RopeSegment14" parent="Ropes/RopeAttache2" instance=ExtResource( 1 )]
+position = Vector2( 0, 496 )
+
+[node name="PinJoint2D18" type="PinJoint2D" parent="Ropes/RopeAttache2"]
+position = Vector2( 0, 507.111 )
+node_a = NodePath("../RopeSegment14")
+node_b = NodePath("../../../ExitButton/ExitBody")
+softness = 0.2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 322 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/OpenningAnimation = SubResource( 11 )
+anims/RESET = SubResource( 12 )
+
+[connection signal="pressed" from="Play/PlayBody/Button/TextureButton" to="." method="OnStartPressed"]
+[connection signal="pressed" from="Options/OptionBody/Button/TextureButton2" to="." method="OnOptionsPressed"]
+[connection signal="pressed" from="Credit/CreditBody/Button/TextureButton4" to="." method="OnCreditPressed"]
+[connection signal="pressed" from="ExitButton/ExitBody/Button/TextureButton3" to="." method="OnExitPressed"]

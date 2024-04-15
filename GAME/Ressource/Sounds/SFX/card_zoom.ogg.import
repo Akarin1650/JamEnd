@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_zoom.ogg-8418bd97caa671213dbc2016809d1e23.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/card_zoom.ogg"
+dest_files=[ "res://.import/card_zoom.ogg-8418bd97caa671213dbc2016809d1e23.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

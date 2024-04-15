@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/attack_dragon.ogg-cf229a2bd9da501b5cb637824dfdadde.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/attack_dragon.ogg"
+dest_files=[ "res://.import/attack_dragon.ogg-cf229a2bd9da501b5cb637824dfdadde.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

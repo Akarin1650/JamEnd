@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_starting_hand.ogg-b80f75363234e87216c8a099a82310a2.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/card_starting_hand.ogg"
+dest_files=[ "res://.import/card_starting_hand.ogg-b80f75363234e87216c8a099a82310a2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

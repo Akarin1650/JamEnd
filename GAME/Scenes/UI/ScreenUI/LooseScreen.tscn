@@ -1,0 +1,392 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/VFX/line.tres" type="Material" id=1]
+[ext_resource path="res://Ressource/Assets/linesTest.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/VFX/Confettis2.tres" type="Material" id=3]
+[ext_resource path="res://Scripts/VFX/particleStarTree.png" type="Texture" id=4]
+[ext_resource path="res://Ressource/Font/Jersey_10/Jersey10-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Ressource/Assets/Materials/DissolveShader.tres" type="Material" id=6]
+[ext_resource path="res://Scripts/UI/Screen/LooseScreen.cs" type="Script" id=7]
+[ext_resource path="res://Ressource/Particles/blur.gdshader" type="Shader" id=8]
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = ExtResource( 8 )
+shader_param/amount = 0.0
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="DynamicFont" id=2]
+size = 125
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 120
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../ColorRect:material:shader_param/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "enter"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/dissolve_value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.166667, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../ColorRect:material:shader_param/amount")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.6 ),
+"transitions": PoolRealArray( 1, -2, -2 ),
+"update": 0,
+"values": [ 0.0, 0.0, 5.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("..:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KillCount/count:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 740, 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KillCount/count:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("confettis:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("line:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "bump"
+tracks/0/type = "value"
+tracks/0/path = NodePath("KillCount/count:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 740, 11 ), Vector2( 637, -80 ), Vector2( 637, -80 ), Vector2( 740, 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KillCount/count:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( -2, -2, -2, -2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("confettis:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.25, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("line:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.28, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KillCount:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 422, 429 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KillCount:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Quit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "idle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KillCount:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 422, 429 ), Vector2( 320, 404 ), Vector2( 422, 429 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KillCount:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.25, 1.25 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Quit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+
+[sub_resource type="StyleBoxTexture" id=12]
+
+[node name="LooseScreen" type="Control"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+scorePath = NodePath("KillCount/count")
+bumpScorePath = NodePath("bump")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource( 13 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="line" type="Particles2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 1 )
+position = Vector2( 961, 525 )
+scale = Vector2( 6, 6 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )
+
+[node name="confettis" type="Particles2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 996, 525 )
+scale = Vector2( 3.8, 3.8 )
+amount = 45
+lifetime = 1.5
+randomness = 1.0
+process_material = ExtResource( 3 )
+texture = ExtResource( 4 )
+
+[node name="KillCount" type="Label" parent="."]
+material = ExtResource( 6 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -538.0
+margin_top = -111.0
+margin_right = 438.986
+margin_bottom = 103.023
+custom_fonts/font = SubResource( 2 )
+text = "YOU KILLED :"
+align = 1
+valign = 1
+
+[node name="count" type="Label" parent="KillCount"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 251.507
+margin_top = -96.0115
+margin_right = 456.507
+margin_bottom = 91.9885
+custom_fonts/font = SubResource( 5 )
+align = 1
+valign = 1
+
+[node name="enterScene" type="AnimationPlayer" parent="KillCount"]
+autoplay = "enter"
+anims/RESET = SubResource( 3 )
+anims/enter = SubResource( 4 )
+
+[node name="bump" type="AnimationPlayer" parent="."]
+autoplay = "bump"
+anims/RESET = SubResource( 7 )
+anims/bump = SubResource( 6 )
+
+[node name="YouKilledIdle" type="AnimationPlayer" parent="."]
+playback_speed = 0.35
+anims/RESET = SubResource( 8 )
+anims/idle = SubResource( 9 )
+
+[node name="Quit" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -330.0
+margin_top = -418.0
+margin_right = 302.0
+margin_bottom = -179.0
+custom_fonts/font = SubResource( 10 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/disabled = SubResource( 12 )
+custom_styles/normal = SubResource( 12 )
+text = "QUIT"
+
+[connection signal="animation_finished" from="KillCount/enterScene" to="." method="MakeScore"]
+[connection signal="pressed" from="Quit" to="." method="OnPressed"]

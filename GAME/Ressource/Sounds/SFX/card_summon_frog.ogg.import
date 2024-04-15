@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_summon_frog.ogg-4cf803ebd48930da49c0e2f40ccf124a.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/card_summon_frog.ogg"
+dest_files=[ "res://.import/card_summon_frog.ogg-4cf803ebd48930da49c0e2f40ccf124a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

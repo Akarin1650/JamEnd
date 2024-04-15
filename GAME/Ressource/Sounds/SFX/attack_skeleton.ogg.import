@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/attack_skeleton.ogg-3e8cb3d2e7cef9b1f7dfbfe46a12ebca.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/attack_skeleton.ogg"
+dest_files=[ "res://.import/attack_skeleton.ogg-3e8cb3d2e7cef9b1f7dfbfe46a12ebca.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

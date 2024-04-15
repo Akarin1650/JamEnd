@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jingle_credits.ogg-0d1535248b134537e9972b92e4a81de9.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/Music/jingle_credits.ogg"
+dest_files=[ "res://.import/jingle_credits.ogg-0d1535248b134537e9972b92e4a81de9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

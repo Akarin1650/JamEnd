@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/card_summon_rabbit.ogg-0f9d0a983ce6cd8b9cdfcc19b9aa4c1f.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/card_summon_rabbit.ogg"
+dest_files=[ "res://.import/card_summon_rabbit.ogg-0f9d0a983ce6cd8b9cdfcc19b9aa4c1f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

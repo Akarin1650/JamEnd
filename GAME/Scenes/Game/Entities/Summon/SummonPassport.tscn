@@ -1,0 +1,475 @@
+[gd_scene load_steps=46 format=2]
+
+[ext_resource path="res://Scripts/Objects/GameObjects/Card/Card.cs" type="Script" id=1]
+[ext_resource path="res://Ressource/Font/Jersey_10/Jersey10-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Deer.png" type="Texture" id=3]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge_Color_Orange_Efficiency.png" type="Texture" id=4]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge_Color_Red_Strength.png" type="Texture" id=5]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge.png" type="Texture" id=6]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge_Color_Grey_Defense.png" type="Texture" id=7]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge_Color_Blue_Magic.png" type="Texture" id=8]
+[ext_resource path="res://Ressource/Assets/ProgressBar/SPR_Gauge_Color_Violet_Charisma.png" type="Texture" id=9]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Frog.png" type="Texture" id=10]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Fox.png" type="Texture" id=11]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Sheep.png" type="Texture" id=12]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Rabbit.png" type="Texture" id=13]
+[ext_resource path="res://Ressource/Font/Jersey_20/Jersey20-Regular.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Ressource/Particles/blur.gdshader" type="Shader" id=15]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Skeleton.png" type="Texture" id=16]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Ogre.png" type="Texture" id=17]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Sorcerer.png" type="Texture" id=18]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Zombie.png" type="Texture" id=19]
+[ext_resource path="res://Ressource/Assets/Passport/SPR_Passport_Dragon.png" type="Texture" id=20]
+[ext_resource path="res://Ressource/Assets/Type/SPR_Icon_Fire.png" type="Texture" id=21]
+[ext_resource path="res://Ressource/Assets/Type/SPR_Icon_Plant.png" type="Texture" id=22]
+[ext_resource path="res://Ressource/Assets/Type/SPR_Icon_Water.png" type="Texture" id=23]
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = ExtResource( 15 )
+shader_param/amount = 2.5
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 19 )
+region = Rect2( 0, 0, 1413, 965 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), ExtResource( 20 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 287, 370 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 22 )
+region = Rect2( 0, 0, 286, 294 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 254, 258 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=8]
+size = 77
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 56
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 32
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 32
+font_data = ExtResource( 14 )
+
+[sub_resource type="Animation" id=28]
+resource_name = "Despawn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, -2 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Spawn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( -2, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1.5, 1.5, 1.5, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="SummonPassport" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 969, 540 )
+mouse_filter = 1
+script = ExtResource( 1 )
+animPath = NodePath("AnimationPlayer")
+efficiencyBarPath = NodePath("Sprite/Gentils/EfficientyBar")
+strengthBarPath = NodePath("Sprite/Gentils/StrengthBar")
+magicBarPath = NodePath("Sprite/Gentils/MagicBar")
+charismaBarPath = NodePath("Sprite/Gentils/CharismaBar")
+defenseBarPath = NodePath("Sprite/Gentils/DefenseBar")
+attributeLabelPath = NodePath("Sprite/Efficienty1")
+attributeLabel2Path = NodePath("Sprite/Efficienty2")
+spriteClassPath = NodePath("Sprite")
+spriteTypePath = NodePath("Sprite/Type")
+namePath = NodePath("Sprite/Name")
+gentilsPath = NodePath("Sprite/Gentils")
+mechonPath = NodePath("Sprite/Méchon")
+descriptionPath = NodePath("Sprite/Méchon/Description")
+attributeLabel3Path = NodePath("Sprite/Méchon/Efficienty3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 16 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -9072.0
+margin_top = -3951.0
+margin_right = 8208.0
+margin_bottom = 5049.0
+mouse_filter = 1
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 988, 540 )
+frames = SubResource( 15 )
+
+[node name="Type" type="AnimatedSprite" parent="Sprite"]
+position = Vector2( -647, -367 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 25 )
+
+[node name="Name" type="Label" parent="Sprite"]
+modulate = Color( 0.662745, 0.352941, 0.027451, 1 )
+margin_left = -473.0
+margin_top = -489.0
+margin_right = -307.0
+margin_bottom = -395.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 150, 47 )
+custom_fonts/font = SubResource( 8 )
+text = "NAME"
+align = 1
+valign = 1
+
+[node name="Gentils" type="Node2D" parent="Sprite"]
+
+[node name="Efficienty" type="Label" parent="Sprite/Gentils"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 3.0
+margin_top = -224.0
+margin_right = 207.0
+margin_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 75, 42 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 7 )
+text = "EFFICIENCY"
+valign = 1
+
+[node name="Strength" type="Label" parent="Sprite/Gentils"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.5
+margin_top = -154.0
+margin_right = 204.5
+margin_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 75, 42 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 7 )
+text = "STRENGTH"
+valign = 1
+
+[node name="Magic" type="Label" parent="Sprite/Gentils"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.5
+margin_top = -84.0
+margin_right = 204.5
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 75, 42 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 7 )
+text = "MAGIC"
+valign = 1
+
+[node name="Charisma" type="Label" parent="Sprite/Gentils"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.5
+margin_top = -14.0
+margin_right = 204.5
+margin_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 75, 42 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 7 )
+text = "CHARISMA"
+valign = 1
+
+[node name="Defense" type="Label" parent="Sprite/Gentils"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.5
+margin_top = 56.0
+margin_right = 204.5
+margin_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 75, 42 )
+mouse_filter = 1
+custom_fonts/font = SubResource( 7 )
+text = "DEFENSE"
+valign = 1
+
+[node name="EfficientyBar" type="TextureProgress" parent="Sprite/Gentils"]
+margin_left = 229.0
+margin_top = -200.0
+margin_right = 514.0
+margin_bottom = -160.0
+rect_pivot_offset = Vector2( 142, 20 )
+max_value = 2.0
+step = 0.2
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 4 )
+
+[node name="StrengthBar" type="TextureProgress" parent="Sprite/Gentils"]
+margin_left = 229.0
+margin_top = -130.0
+margin_right = 514.0
+margin_bottom = -90.0
+rect_pivot_offset = Vector2( 142, 20 )
+max_value = 10.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+
+[node name="MagicBar" type="TextureProgress" parent="Sprite/Gentils"]
+margin_left = 229.0
+margin_top = -60.0
+margin_right = 514.0
+margin_bottom = -20.0
+rect_pivot_offset = Vector2( 142, 20 )
+max_value = 10.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 8 )
+
+[node name="CharismaBar" type="TextureProgress" parent="Sprite/Gentils"]
+margin_left = 229.0
+margin_top = 10.0
+margin_right = 514.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 142, 20 )
+max_value = 10.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 9 )
+
+[node name="DefenseBar" type="TextureProgress" parent="Sprite/Gentils"]
+margin_left = 229.0
+margin_top = 80.0
+margin_right = 514.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 142, 20 )
+max_value = 10.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 7 )
+
+[node name="Méchon" type="Node2D" parent="Sprite"]
+visible = false
+
+[node name="Description" type="Label" parent="Sprite/Méchon"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 10.0
+margin_top = -200.0
+margin_right = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+custom_fonts/font = SubResource( 21 )
+text = "Description"
+autowrap = true
+
+[node name="Efficienty3" type="Label" parent="Sprite/Méchon"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 45.0
+margin_top = 30.0
+margin_right = 545.0
+margin_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+custom_fonts/font = SubResource( 9 )
+text = "3"
+
+[node name="Efficienty1" type="Label" parent="Sprite"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 45.0
+margin_top = 147.0
+margin_right = 545.0
+margin_bottom = 267.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+custom_fonts/font = SubResource( 9 )
+text = "1"
+
+[node name="Efficienty2" type="Label" parent="Sprite"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 45.0
+margin_top = 264.0
+margin_right = 545.0
+margin_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+custom_fonts/font = SubResource( 9 )
+text = "2"
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Despawn = SubResource( 28 )
+anims/RESET = SubResource( 26 )
+anims/Spawn = SubResource( 27 )

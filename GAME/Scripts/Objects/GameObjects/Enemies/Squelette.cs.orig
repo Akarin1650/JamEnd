@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+using Com.IsartDigital.Jam.Cards;
+=======
+using Com.IsartDigital.Jam.Managers;
+>>>>>>> 4584a90873f13918b9ecf0add288c2e18dc4c69d
+using Com.IsartDigital.Jam.MyGameObjects.MyEntities;
+using Com.IsartDigital.ProjectName;
+using Godot;
+using System;
+
+// Author : Alexis MARTIN
+namespace Com.IsartDigital.Jam.MyGameObjects
+{	
+	public class Squelette : Enemy
+	{
+        public Squelette(int pHealth, int pStrength, int pMagic, int pEfficiency, int pArmor, int pCharisma, string pElement) :
+                           base(pHealth, pStrength, pMagic, pEfficiency, pArmor, pCharisma, pElement)
+        {
+
+        }
+        public Squelette() : this(
+                (int)GD.RandRange(15, 25),
+                (int)GD.RandRange(6, 9),
+                (int)GD.RandRange(2, 5),
+                0,
+                0,
+                (int)GD.RandRange(2, 5),
+                GameManager.GetInstance().RandomElement()
+            )
+        { }
+    }
+}

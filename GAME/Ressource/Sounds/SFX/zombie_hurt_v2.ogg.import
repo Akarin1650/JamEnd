@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zombie_hurt_v2.ogg-442d69340596d68d2c6e6ff4db4e5240.oggstr"
+
+[deps]
+
+source_file="res://Ressource/Sounds/SFX/zombie_hurt_v2.ogg"
+dest_files=[ "res://.import/zombie_hurt_v2.ogg-442d69340596d68d2c6e6ff4db4e5240.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
