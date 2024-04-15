@@ -1,4 +1,5 @@
 using Com.IsartDigital.Jam.Managers;
+using Com.IsartDigital.Jam.UI;
 using Godot;
 using System;
 
@@ -105,7 +106,12 @@ namespace Com.IsartDigital.Jam.MyGameObjects.MyEntities
                 GD.Print("PLAYER HEALTH : " + pPlayer.Health);
 
 
-                if (pPlayer.Health <= 0) GD.Print("You'Re Dead !");
+                if (pPlayer.Health <= 0) {
+
+                    LooseScreen lScreen = GameManager.GetInstance().looseScreen.Instance() as LooseScreen;
+                    GameManager.GetInstance().looseScreenPoint.AddChild(lScreen);
+                    GD.Print("You'Re Dead !");
+                }
                 //emit signal here
             }
         }
