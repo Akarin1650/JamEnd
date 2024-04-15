@@ -443,6 +443,7 @@ grow_vertical = 2
 mouse_filter = 1
 custom_fonts/font = SubResource( 9 )
 text = "3"
+autowrap = true
 
 [node name="Efficienty1" type="Label" parent="Sprite"]
 modulate = Color( 0, 0, 0, 1 )
@@ -455,6 +456,7 @@ grow_vertical = 2
 mouse_filter = 1
 custom_fonts/font = SubResource( 9 )
 text = "1"
+autowrap = true
 
 [node name="Efficienty2" type="Label" parent="Sprite"]
 modulate = Color( 0, 0, 0, 1 )

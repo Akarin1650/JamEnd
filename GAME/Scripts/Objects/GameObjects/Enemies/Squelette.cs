@@ -38,9 +38,9 @@ namespace Com.IsartDigital.Jam.MyGameObjects
                     isEntered = false;
 
                     if (EntityManager.GetInstance().currentEnemy.attributes.Count == 1)
-                        Card.GetInstance().SetPassportInfos(this, TranslationServer.Translate("ZOMBIE_DESCRIPTION"), TranslationServer.Translate("ZOMBIE_NAME"), Element, EntityManager.GetInstance().currentEnemy.attributes[0]);
+                        Card.GetInstance().SetPassportInfos(this, TranslationServer.Translate("SQUELETON_DESCRIPTION"), TranslationServer.Translate("SQUELETON_NAME"), Element, EntityManager.GetInstance().currentEnemy.attributes[0]);
                     else if (EntityManager.GetInstance().currentEnemy.attributes.Count == 2)
-                        Card.GetInstance().SetPassportInfos(this, TranslationServer.Translate("ZOMBIE_DESCRIPTION"), TranslationServer.Translate("ZOMBIE_NAME"), Element, EntityManager.GetInstance().currentEnemy.attributes[0], EntityManager.GetInstance().currentEnemy.attributes[1]);
+                        Card.GetInstance().SetPassportInfos(this, TranslationServer.Translate("SQUELETON_DESCRIPTION"), TranslationServer.Translate("SQUELETON_NAME"), Element, EntityManager.GetInstance().currentEnemy.attributes[0], EntityManager.GetInstance().currentEnemy.attributes[1]);
 
                     Card.GetInstance().ShowPassport();
                 }
