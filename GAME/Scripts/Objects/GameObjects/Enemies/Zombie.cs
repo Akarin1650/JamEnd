@@ -16,12 +16,12 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Zombie() : this(
-                (int)GD.RandRange(20, 25),
+                (int)GD.RandRange(18, 21),
                 (int)GD.RandRange(0, 2),
                 (int)GD.RandRange(0,1),
                 0,
                 0,
-                (int)GD.RandRange(3, 7),
+                (int)GD.RandRange(3, 6),
                 GameManager.GetInstance().RandomElement()
             )
         { }

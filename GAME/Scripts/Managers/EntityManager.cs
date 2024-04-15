@@ -167,16 +167,16 @@ namespace Com.IsartDigital.Jam.Managers
                         break;
 
                     case "win or loose":
-                        
-                        int lIndex = (int)GD.RandRange(0, 1);
-                        GD.Print(lIndex);
+                        GD.Randomize();
+                        int lIndex = (int)GD.RandRange(0,2);
                         if (lIndex == 0)
                         {
                             pClass.Strength += currentEnemy.Strength;
                             pClass.Magic += currentEnemy.Magic;
                             pClass.Charisma += currentEnemy.Charisma;
                         }
-                        else{
+                        else if(lIndex == 1 || lIndex ==2)
+                        {
                             pClass.Strength -= currentEnemy.Strength;
                             pClass.Magic -= currentEnemy.Magic;
                             pClass.Charisma -= currentEnemy.Charisma;
@@ -321,10 +321,10 @@ namespace Com.IsartDigital.Jam.Managers
         public void WaveHandler()
         {
 
-            if (enemyCount == 0 && GameManager.GetInstance().hpPlayerBar.Value != 40)
+            if (enemyCount == 0 && GameManager.GetInstance().hpPlayerBar.Value != 55)
             {
-                GameManager.GetInstance().player.Health = 40;
-                GameManager.GetInstance().hpPlayerBar.Value = 40f;
+                GameManager.GetInstance().player.Health = 55;
+                GameManager.GetInstance().hpPlayerBar.Value = 55f;
                 GameManager.GetInstance().PlayerHpBarChange(GameManager.GetInstance().hpPlayerBar);
             }
 

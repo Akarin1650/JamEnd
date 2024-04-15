@@ -20,7 +20,7 @@ namespace Com.IsartDigital.Jam.MyGameObjects
         }
 
         public Demon() : this(
-                (int)GD.RandRange(30, 40),
+                (int)GD.RandRange(25, 30),
                 (int)GD.RandRange(6, 9),
                 (int)GD.RandRange(2, 4),
                 0,

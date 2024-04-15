@@ -16,7 +16,7 @@ namespace Com.IsartDigital.Jam.MyGameObjects
 
         }
         public Dragon() : this(
-                (int)GD.RandRange(30, 40),
+                (int)GD.RandRange(25, 30),
                 (int)GD.RandRange(3, 5),
                 (int)GD.RandRange(6, 9),
                 0,
